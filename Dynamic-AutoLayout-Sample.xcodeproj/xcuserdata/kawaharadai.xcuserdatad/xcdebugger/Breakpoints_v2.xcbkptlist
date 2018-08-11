@@ -33,5 +33,35 @@
             </Actions>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "Yes"
+            filePath = "Dynamic-AutoLayout-Sample/Controller/TableViewController.swift"
+            timestampString = "555669447.457631"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "thread jump --by 5">
+                  </ActionContent>
+               </BreakpointActionProxy>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "expression cell.setCellData(title: &quot;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&#x30c6;&#x30b9;&#x30c8;&quot;, leftImageName: String(indexPath.row + 1), goodCount: 1000000, isNotHiddenGoodIcon: true, isNotHiddenGoodCount: false)">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

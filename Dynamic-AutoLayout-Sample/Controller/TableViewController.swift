@@ -10,9 +10,9 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
-    // (0: タイトル, 1: いいねの数, 2: 高評価アイコンの有無、3: いいねの数表示の有無)
-    private let titles = [("Mamma Mia! Here We Go Again", 100000),
-                          ("Jurassic World The Kingdom of Flames", 3000),
+    // (0: タイトル, 1: いいねの数)
+    private let titles = [("Mamma Mia! Here We Go Again", 10000),
+                          ("Jurassic World The Kingdom of Flames", 9999),
                           ("Mission Impossible Fallout", 500000),
                           ("Pocket Monsters' Everyone's Story", 999),
                           ("Hotel Transylvania 3: Summer Vacation", 1001)]

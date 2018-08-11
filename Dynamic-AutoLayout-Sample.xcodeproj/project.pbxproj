@@ -58,16 +58,40 @@
 		4594D325211E71D900351ACC /* Dynamic-AutoLayout-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				4594D340211ECFF700351ACC /* View */,
+				4594D33F211ECFF300351ACC /* Controller */,
+				4594D33E211ECFF100351ACC /* Other */,
+			);
+			path = "Dynamic-AutoLayout-Sample";
+			sourceTree = "<group>";
+		};
+		4594D33E211ECFF100351ACC /* Other */ = {
+			isa = PBXGroup;
+			children = (
 				4594D326211E71D900351ACC /* AppDelegate.swift */,
-				4594D32A211E71D900351ACC /* Main.storyboard */,
-				4594D33B211E769E00351ACC /* CustomCell.xib */,
-				4594D338211E723D00351ACC /* TableViewController.swift */,
 				4594D32D211E71D900351ACC /* Assets.xcassets */,
 				4594D32F211E71D900351ACC /* LaunchScreen.storyboard */,
 				4594D332211E71D900351ACC /* Info.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		4594D33F211ECFF300351ACC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4594D32A211E71D900351ACC /* Main.storyboard */,
+				4594D338211E723D00351ACC /* TableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4594D340211ECFF700351ACC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4594D33B211E769E00351ACC /* CustomCell.xib */,
 				4594D33A211E769E00351ACC /* CustomCell.swift */,
 			);
-			path = "Dynamic-AutoLayout-Sample";
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
-				INFOPLIST_FILE = "Dynamic-AutoLayout-Sample/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Dynamic-AutoLayout-Sample/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
-				INFOPLIST_FILE = "Dynamic-AutoLayout-Sample/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Dynamic-AutoLayout-Sample/Other/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

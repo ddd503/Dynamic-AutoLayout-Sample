@@ -15,7 +15,8 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var goodIcon: UIImageView!
     @IBOutlet weak var countView: UIView!
     @IBOutlet weak var countLabel: UILabel!
-    // 一度のisActiveの変更で解放しないよう保持
+    @IBOutlet weak var doneLabel: UILabel!
+    // 一度のisActiveの変更で解放されないようWeakにせずに保持
     @IBOutlet var titleToGoodIconConstrant: NSLayoutConstraint!
     @IBOutlet var titleToCountViewConstrant: NSLayoutConstraint!
     @IBOutlet var titleToSuperViewConstrant: NSLayoutConstraint!
@@ -62,6 +63,8 @@ class CustomCell: UITableViewCell {
             self.titleToGoodIconConstrant.isActive = true
             self.goodIconToCountViewConstrant.isActive = true
             self.goodIconToSuperViewConstrant.isActive = false
+            // 高評価の作成は視聴済みとする
+            self.doneLabel.text = "(視聴済み)"
         } else if !isNotHiddenGoodIcon && isNotHiddenGoodCount {
             // 高評価アイコンは非表示、いいねの数のみの場合
             self.titleToSuperViewConstrant.isActive = false
@@ -69,6 +72,7 @@ class CustomCell: UITableViewCell {
             self.titleToGoodIconConstrant.isActive = false
             self.goodIconToCountViewConstrant.isActive = false
             self.goodIconToSuperViewConstrant.isActive = false
+            self.doneLabel.text = ""
         } else if isNotHiddenGoodIcon && !isNotHiddenGoodCount {
             // 高評価アイコンのみ表示、いいねの数は非表示の場合（例外パターン）
             self.titleToSuperViewConstrant.isActive = false
@@ -76,6 +80,7 @@ class CustomCell: UITableViewCell {
             self.titleToGoodIconConstrant.isActive = true
             self.goodIconToCountViewConstrant.isActive = false
             self.goodIconToSuperViewConstrant.isActive = true
+            self.doneLabel.text = "(視聴済み)"
         } else {
             // 高評価アイコン、いいねの数、両方とも表示しない場合
             self.titleToSuperViewConstrant.isActive = true
@@ -83,6 +88,8 @@ class CustomCell: UITableViewCell {
             self.titleToGoodIconConstrant.isActive = false
             self.goodIconToCountViewConstrant.isActive = false
             self.goodIconToSuperViewConstrant.isActive = false
+            self.doneLabel.text = ""
         }
     }
+    
 }
