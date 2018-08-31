@@ -56,7 +56,26 @@ class CustomCell: UITableViewCell {
     ///   - isNotHiddenGoodIcon: 高評価アイコンを表示させるか（true: させる、false: させない）
     ///   - isNotHiddenGoodCount: いいねの数を出すかどうか（true: 出す、 false: 出さない）
     private func adjustSubViewConstrant(isNotHiddenGoodIcon: Bool, isNotHiddenGoodCount: Bool) {
-        if isNotHiddenGoodIcon && isNotHiddenGoodCount {
+        
+        switch LayoutStatus(hasIcon: isNotHiddenGoodIcon,
+                            hasGood: isNotHiddenGoodCount) {
+        case .nothing:
+            // 高評価アイコン、いいねの数、両方とも表示しない場合
+            self.titleToSuperViewConstrant.isActive = true
+            self.titleToCountViewConstrant.isActive = false
+            self.titleToGoodIconConstrant.isActive = false
+            self.goodIconToCountViewConstrant.isActive = false
+            self.goodIconToSuperViewConstrant.isActive = false
+            self.doneLabel.text = ""
+        case .count:
+            // 高評価アイコンは非表示、いいねの数のみの場合
+            self.titleToSuperViewConstrant.isActive = false
+            self.titleToCountViewConstrant.isActive = true
+            self.titleToGoodIconConstrant.isActive = false
+            self.goodIconToCountViewConstrant.isActive = false
+            self.goodIconToSuperViewConstrant.isActive = false
+            self.doneLabel.text = ""
+        case .good:
             // 高評価アイコン、いいねの数、両方とも表示する場合
             self.titleToSuperViewConstrant.isActive = false
             self.titleToCountViewConstrant.isActive = false
@@ -65,15 +84,7 @@ class CustomCell: UITableViewCell {
             self.goodIconToSuperViewConstrant.isActive = false
             // 高評価の作成は視聴済みとする
             self.doneLabel.text = "(視聴済み)"
-        } else if !isNotHiddenGoodIcon && isNotHiddenGoodCount {
-            // 高評価アイコンは非表示、いいねの数のみの場合
-            self.titleToSuperViewConstrant.isActive = false
-            self.titleToCountViewConstrant.isActive = true
-            self.titleToGoodIconConstrant.isActive = false
-            self.goodIconToCountViewConstrant.isActive = false
-            self.goodIconToSuperViewConstrant.isActive = false
-            self.doneLabel.text = ""
-        } else if isNotHiddenGoodIcon && !isNotHiddenGoodCount {
+        case .exception:
             // 高評価アイコンのみ表示、いいねの数は非表示の場合（例外パターン）
             self.titleToSuperViewConstrant.isActive = false
             self.titleToCountViewConstrant.isActive = false
@@ -81,14 +92,6 @@ class CustomCell: UITableViewCell {
             self.goodIconToCountViewConstrant.isActive = false
             self.goodIconToSuperViewConstrant.isActive = true
             self.doneLabel.text = "(視聴済み)"
-        } else {
-            // 高評価アイコン、いいねの数、両方とも表示しない場合
-            self.titleToSuperViewConstrant.isActive = true
-            self.titleToCountViewConstrant.isActive = false
-            self.titleToGoodIconConstrant.isActive = false
-            self.goodIconToCountViewConstrant.isActive = false
-            self.goodIconToSuperViewConstrant.isActive = false
-            self.doneLabel.text = ""
         }
     }
     

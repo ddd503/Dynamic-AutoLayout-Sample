@@ -14,6 +14,7 @@
 		4594D339211E723D00351ACC /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594D338211E723D00351ACC /* TableViewController.swift */; };
 		4594D33C211E769E00351ACC /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4594D33A211E769E00351ACC /* CustomCell.swift */; };
 		4594D33D211E769E00351ACC /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4594D33B211E769E00351ACC /* CustomCell.xib */; };
+		45A7F2AD213990B800035C1E /* LayoutStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7F2AC213990B800035C1E /* LayoutStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4594D338211E723D00351ACC /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		4594D33A211E769E00351ACC /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		4594D33B211E769E00351ACC /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		45A7F2AC213990B800035C1E /* LayoutStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		4594D325211E71D900351ACC /* Dynamic-AutoLayout-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				45A7F2AB2139909F00035C1E /* Utill */,
 				4594D340211ECFF700351ACC /* View */,
 				4594D33F211ECFF300351ACC /* Controller */,
 				4594D33E211ECFF100351ACC /* Other */,
@@ -92,6 +95,14 @@
 				4594D33A211E769E00351ACC /* CustomCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		45A7F2AB2139909F00035C1E /* Utill */ = {
+			isa = PBXGroup;
+			children = (
+				45A7F2AC213990B800035C1E /* LayoutStatus.swift */,
+			);
+			path = Utill;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				4594D339211E723D00351ACC /* TableViewController.swift in Sources */,
 				4594D33C211E769E00351ACC /* CustomCell.swift in Sources */,
 				4594D327211E71D900351ACC /* AppDelegate.swift in Sources */,
+				45A7F2AD213990B800035C1E /* LayoutStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +327,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
 				INFOPLIST_FILE = "$(SRCROOT)/Dynamic-AutoLayout-Sample/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVR5UQEHBD;
 				INFOPLIST_FILE = "$(SRCROOT)/Dynamic-AutoLayout-Sample/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
